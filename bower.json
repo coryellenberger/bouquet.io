@@ -1,0 +1,29 @@
+{
+  "name": "bouquet.io",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Cory Ellenberger"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/coryellenberger/bouquet.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.6.x",
+    "angular-mocks": "1.6.x",
+    "angular-route": "1.6.x",
+    "lodash": "^4.17.4",
+    "angular-resource": "^1.5.8",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2",
+    "jquery": "^3.1.1",
+    "skel": "^3.0.1"
+  }
+}
