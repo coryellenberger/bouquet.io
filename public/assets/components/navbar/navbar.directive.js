@@ -42,30 +42,31 @@
       var hide = function () {
         $body.removeClass('is-menu-visible')
       }
-
-      $menu.on('click', 'a', function () {
-        hide()
-      })
-      .on('click', '.close', function (event) {
-        event.stopPropagation()
-        event.preventDefault()
-        hide()
-      })
-
-      // on Menu click event
-      $body.on('click', 'a[href="#menu"]', function (event) {
+      // on header menu anchor click event: show menu
+      // stop propagation of route for show menu
+      $element.find('a[href="#menu"]').on('click', function (event) {
         event.stopPropagation()
         event.preventDefault()
         show()
       })
-      // on Body click to hide menu
-      .on('click', function (event) {
-        // Hide.
+      // on menu item click event: hide menu
+      // allow propagation of routes
+      $menu.find('a:not(.close)').on('click', function () {
         hide()
       })
-      // on escape key to hide menu
+      // on menu Close Icon click event: hide menu
+      // stop propagation of route for close
+      $menu.find('.close').on('click', function (event) {
+        event.stopPropagation()
+        event.preventDefault()
+        hide()
+      })
+      // on body click event: hide menu
+      $body.on('click', function () {
+        hide()
+      })
+      // on body escape keydown event: hide menu
       .on('keydown', function (event) {
-        // Hide on escape.
         if (event.keyCode === 27) {
           hide()
         }
