@@ -1,5 +1,5 @@
 /**
- * Directive that will handle the header menu icon
+ * [Directive]{@link https://docs.angularjs.org/guide/directive} that will handle the header menu icon
  * as well as showing/hiding the menu
  * @module navBar
  * @example <nav-bar></nav-bar>
@@ -17,8 +17,8 @@
    * @prop {E} restrict - Element only
    * @prop {{}} scope - isolated
    * @prop {navbar.html} templateUrl - path to template
-   * @param {object} $document - The Document element provided by Angular
-   * @param {object} jQuery - jQuery Library provided as Angular Dependency
+   * @param {object} $document - [A jQuery wrapper]{@link https://docs.angularjs.org/api/ng/service/$document} for the browser's window.document object.
+   * @param {object} jQuery - [jQuery]{@link globals/jquery.factory.js} Library provided as Angular Dependency
    * @method navBar
    */
   function navBar ($document, $) {
@@ -34,13 +34,13 @@
     /**
      * Linking up event listeners to the header, menu and body to hide/show the Menu;
      * appending the Menu to the body for visibility
-     * @listens $element~click a[href="#menu"]
-     * @listens $menu~click a:not(.close)
-     * @listens $menu~click .close
-     * @listens $body~click
-     * @listens $body~keydown
-     * @param {object} scope - Scope of this directive
-     * @param {object} $element - NavBar jQuery element
+     * @listens $element~[click]{@link https://api.jquery.com/click/} a[href="#menu"]
+     * @listens $menu~[click]{@link https://api.jquery.com/click/} a:not(close)
+     * @listens $menu~[click]{@link https://api.jquery.com/click/} close
+     * @listens $body~[click]{@link https://api.jquery.com/click/}
+     * @listens $body~[keydown]{@link https://api.jquery.com/keydown/}
+     * @param {object} scope - [Scope]{@link https://docs.angularjs.org/guide/scope} of this directive
+     * @param {object} $element - [NavBar jQuery element]{@link http://api.jquery.com/jquery/}
      * @method link
      */
     function link (scope, $element) {
