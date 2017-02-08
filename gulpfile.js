@@ -17,7 +17,7 @@ gulp.task('test', function (done) {
     configFile: path.join(__dirname, '/karma.conf.js'),
     singleRun: true,
     browsers: ['PhantomJS'],
-    reporters: ['coverage', 'progress']
+    reporters: ['coverage', 'dots']
   }, done()).start()
 })
 
