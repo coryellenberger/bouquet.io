@@ -10,6 +10,8 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
+      // load jQuery
+      { pattern: 'public/libs/jquery/dist/jquery.min.js', watched: false },
       // load angular first
       { pattern: 'public/libs/angular/angular.js', watched: false },
       // load angular mock for testing
@@ -20,10 +22,10 @@ module.exports = function (config) {
       { pattern: 'public/libs/angular-route/angular-route.js', watched: false },
       // load lodash
       { pattern: 'public/libs/lodash/dist/lodash.min.js', watched: false },
-      // load jQuery
-      { pattern: 'public/libs/jquery/dist/jquery.min.js', watched: false },
       // load skel
       { pattern: 'public/libs/skel/dist/skel.min.js', watched: false },
+      // html templates
+      { pattern: 'public/assets/**/*.html' },
       // load all non-test resources first
       { pattern: 'public/assets/**/!(*spec).js', watched: true },
       // then load the unit tests
@@ -41,7 +43,16 @@ module.exports = function (config) {
       // source files, that you wanna generate coverage for
       // do not include tests or libraries
       // (these files will be instrumented by Istanbul)
-      'public/assets/**/!(*spec).js': ['coverage']
+      'public/assets/**/!(*spec).js': ['coverage'],
+      // html files we want to provide for directives
+      'public/assets/**/*.html': ['ng-html2js']
+    },
+
+    ngHtml2JsPreprocessor: {
+      // strip this from the file path
+      stripPrefix: 'public/',
+      // the name of the Angular module to create
+      moduleName: 'templates'
     },
 
     // optionally, configure the reporter
