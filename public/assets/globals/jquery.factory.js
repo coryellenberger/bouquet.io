@@ -1,5 +1,5 @@
 /**
- * jQuery Library provided as Angular Dependency
+ * [jQuery]{@link https://jquery.com/} Library provided as Angular Dependency
  * @module jQuery
  */
 (function () {
@@ -10,8 +10,8 @@
   jQuery.$inject = ['$window']
 
   /**
-   * @param {object} $window - Get the $window to get jQuery
-   * @constructs jQuery
+   * @param {object} $window - [$window]{@link https://docs.angularjs.org/api/ng/service/$window} is a reference to the browser's window object
+   * @method jQuery
    */
   function jQuery ($window) {
     return $window.jQuery
