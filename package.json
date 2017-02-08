@@ -11,8 +11,7 @@
   "standard": {
     "ignore": [
       "public/libs/**",
-      "out/**",
-      "public/util.js"
+      "out/**"
     ],
     "globals": [
       "angular",
