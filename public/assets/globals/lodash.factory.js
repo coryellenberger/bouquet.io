@@ -1,5 +1,5 @@
 /**
- * Lodash Library added to Angular Library
+ * Lodash Library provided as Angular Dependency
  * @module lodash
  */
 (function () {
@@ -14,6 +14,6 @@
    * @constructs lodash
    */
   function lodash ($window) {
-    return $window._ // Lodash must already be loaded on the page
+    return $window._
   }
 })()
