@@ -42,6 +42,7 @@ $ npm install --quiet --production
 - [Angular JS](https://docs.angularjs.org/api) A structural framework for dynamic web apps
 - Angular Route
 - Lodash
+- [Font Awesome](http://fontawesome.io/) Font Awesome gives you scalable vector icons that can instantly be customized
 - Angular Resource A factory which creates a resource object that lets you interact with RESTful server-side data sources
 - HTML5Shiv HTML5 support for older browsers
 - Respond A fast & lightweight polyfill for min/max-width CSS3 Media Queries
