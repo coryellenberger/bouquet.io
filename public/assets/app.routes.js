@@ -1,5 +1,5 @@
 /**
- * Configure the Routes for this application
+ * Configure the Routes for Bouquet.IO
  * @module RouteConfig
  */
 (function () {
@@ -10,10 +10,13 @@
   RouteConfig.$inject = ['$routeProvider', '$locationProvider']
 
   /**
-   * Configure the Routes for Bouquet.io
+   * Configure the hash prefix as well as the route paths
+   * @listens $routeProvider~route /
+   * @listens $routeProvider~route /generic
+   * @listens $routeProvider~route /elements
    * @param {object} $routeProvider - Used for configuring routes.
    * @param {object} $locationProvider - Use the $locationProvider to configure how the application deep linking paths are stored.
-   * @constructs RouteConfig
+   * @method RouteConfig
    */
   function RouteConfig ($routeProvider, $locationProvider) {
     // configure to use hash prefix /#/
@@ -22,9 +25,7 @@
     $routeProvider
 
     .when('/', {
-      templateUrl: 'assets/components/home/home.html',
-      controller: 'HomeController',
-      controllerAs: 'vm'
+      templateUrl: 'assets/components/home/home.html'
     })
 
     .when('/generic', {
