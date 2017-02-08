@@ -22,7 +22,7 @@
             <a href="#/" class="logo">
                 <span class="symbol"><img src="images/logo.png" alt=""/></span><span class="title">Bouquet.io</span>
             </a>
-            <!-- Nav -->
+            <!-- Nav Icon -->
             <nav>
                 <ul>
                     <li><a href="#menu">Menu</a></li>
@@ -31,15 +31,7 @@
         </div>
     </header>
 
-    <!-- Menu -->
-    <nav id="menu">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="#/">Home</a></li>
-            <li><a href="#/generic">Generic</a></li>
-            <li><a href="#/elements">Elements</a></li>
-        </ul>
-    </nav>
+    <nav-bar id="menu"></nav-bar>
 
     <ng-view id="main"></ng-view>
 
@@ -49,13 +41,14 @@
 
 <!--[if lte IE 8]>
 <script src="libs/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
+
+<!-- jQuery -->
+<script src="libs/jquery/dist/jquery.min.js"></script>
+
 <!-- Angular -->
 <script src="libs/angular/angular.js"></script>
 <script src="libs/angular-route/angular-route.js"></script>
 <script src="libs/angular-resource/angular-resource.js"></script>
-
-<!-- jQuery -->
-<script src="libs/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript">
     var $body = $('body')
 
@@ -67,24 +60,26 @@
         $body.removeClass('is-loading')
       }, 100)
     })
+
 </script>
 
 <!-- Skel.js -->
 <script src="libs/skel/dist/skel.min.js"></script>
-
-<script src="util.js"></script>
+<script src="assets/util.js"></script>
 <script src="assets/main.js"></script>
 
 <!-- Lodash -->
 <script src="libs/lodash/dist/lodash.js"></script>
 
 <!-- Angular Custom -->
+<script src="assets/globals/jquery.factory.js"></script>
 <script src="assets/globals/lodash.factory.js"></script>
 <script src="assets/app.module.js"></script>
 <script src="assets/app.routes.js"></script>
 
-<!-- Article -->
+<!-- Project Components -->
 <script src="assets/components/home/home.controller.js"></script>
+<script src="assets/components/navbar/navbar.directive.js"></script>
 
 </body>
 </html>
