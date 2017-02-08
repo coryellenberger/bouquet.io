@@ -7,6 +7,7 @@
     .module('bouquet', [
       'ngRoute',
       'ngResource',
+      'jQuery',
       'lodash'
     ])
 })()

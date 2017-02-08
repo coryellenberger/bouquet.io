@@ -13,7 +13,11 @@ describe('bouquet', function () {
     expect(bouquetApp.requires[1]).toEqual('ngResource')
   })
 
+  it('should return the jQuery module', function () {
+    expect(bouquetApp.requires[2]).toEqual('jQuery')
+  })
+
   it('should return the lodash module', function () {
-    expect(bouquetApp.requires[2]).toEqual('lodash')
+    expect(bouquetApp.requires[3]).toEqual('lodash')
   })
 })
